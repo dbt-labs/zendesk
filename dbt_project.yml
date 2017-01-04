@@ -15,3 +15,4 @@ models:
       enabled: true
       vars:
         organizations_table: # schema.table
+        tickets_table:       # schema.table
