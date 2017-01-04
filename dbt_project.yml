@@ -13,3 +13,5 @@ models:
   zendesk:
     stitch:
       enabled: true
+      vars:
+        organizations_table: # schema.table
