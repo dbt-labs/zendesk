@@ -1,0 +1,15 @@
+name: 'zendesk'
+version: '0.1'
+
+source-paths: ["models"]
+analysis-paths: ["analysis"]
+target-path: "target"
+clean-targets: ["target", "dbt_modules"]
+test-paths: ["test"]
+data-paths: ["data"]
+log-path: "logs"
+
+models:
+  zendesk:
+    stitch:
+      enabled: true
