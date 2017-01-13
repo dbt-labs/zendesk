@@ -2,11 +2,11 @@
 
 with tickets as (
 
-  select * from dbt_jthandy.zendesk_tickets
+  select * from {{ref('zendesk_tickets')}}
 
 ), url as (
 
-  select * from dbt_jthandy.zendesk_org_url
+  select * from {{ref('zendesk_org_url')}}
 
 )
 

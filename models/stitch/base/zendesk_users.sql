@@ -11,4 +11,4 @@ select
   suspended,
   created_at,
   updated_at
-from zendesk.users
+from {{var('users_table')}}
