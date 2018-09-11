@@ -1,2 +1,2 @@
-# zendesk
-dbt data models for Zendeskk.
+# Zendesk
+dbt data models for Zendesk.
