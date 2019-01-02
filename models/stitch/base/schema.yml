@@ -21,3 +21,10 @@ models:
         tests:
             - unique
             - not_null
+            
+    - name: zendesk_ticket_events
+      columns:
+      - name: ticket_event_id
+        tests:
+            - unique
+            - not_null
