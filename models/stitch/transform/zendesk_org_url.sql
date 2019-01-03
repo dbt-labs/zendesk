@@ -10,7 +10,7 @@ select distinct
   {{ 
     dbt_utils.split_part(
       dbt_utils.split_part('api_url', "'//'", 2
-      ), "'zendesk.com'", 1
+      ), "'.zendesk.com'", 1
     ) 
   }} as org_url_identifier
 from tickets
