@@ -22,7 +22,7 @@ models:
             - unique
             - not_null
     
-    - name: zendesk_ticket_events_flatted
+    - name: zendesk_ticket_events_flattened
       description: >
         This model takes all of the ticket event history and summarizes it one 
         row per ticket_id for useful fields like when it was first assigned, 
