@@ -7,8 +7,12 @@ with tickets as (
 calculate as (
 
     select distinct
-        split_part(split_part(api_url, '//', 2), '.zendesk.com', 1) 
-            as org_url_identifier
+      {{ 
+        dbt_utils.split_part(
+          dbt_utils.split_part('api_url', "'//'", 2
+          ), "'.zendesk.com'", 1
+        ) 
+      }} as org_url_identifier
     from tickets
     
 )
