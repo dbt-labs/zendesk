@@ -23,7 +23,6 @@ renamed as (
         recipient,
         "type" as ticket_type,
         url as api_url,
-        satisfaction_rating_score,
         
         --dates
         created_at,
