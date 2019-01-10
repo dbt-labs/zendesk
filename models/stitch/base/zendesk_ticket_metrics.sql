@@ -30,7 +30,7 @@ renamed as (
         reopens,
         replies,
         reply_time_in_minutes__business as reply_time_in_minutes_business,
-        reply_time_in_minutes__calendar as reply_time_in_minutes__calendar,
+        reply_time_in_minutes__calendar as reply_time_in_minutes_calendar,
         requester_wait_time_in_minutes__business 
             as requester_wait_time_in_minutes_business,
         requester_wait_time_in_minutes__calendar 
