@@ -44,7 +44,7 @@ final as (
         metrics.on_hold_time_in_minutes_business,
         metrics.on_hold_time_in_minutes_calendar,
         metrics.reply_time_in_minutes_business,
-        metrics.reply_time_in_minutes__calendar,
+        metrics.reply_time_in_minutes_calendar,
         metrics.requester_wait_time_in_minutes_business,
         metrics.requester_wait_time_in_minutes_calendar,
         
