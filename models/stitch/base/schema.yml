@@ -22,9 +22,20 @@ models:
             - unique
             - not_null
             
-    - name: zendesk_ticket_events
+    - name: zendesk_ticket_metrics
       columns:
-      - name: ticket_event_id
+      - name: ticket_id
+        tests:
+            - unique
+            - not_null
+      - name: id
+        tests:
+            - unique
+            - not_null
+            
+    - name: zendesk_ticket_tags
+      columns:
+      - name: tag_id
         tests:
             - unique
             - not_null

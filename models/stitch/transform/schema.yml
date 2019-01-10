@@ -14,19 +14,8 @@ models:
     - name: zendesk_tickets_xf
       description: >
         Adds a useful utility field, web_url. This is useful to provide a link 
-        to the ticket from within a report. This also adds a summary of timestamp 
-        values from the ticket events table. 
-      columns:
-      - name: ticket_id
-        tests:
-            - unique
-            - not_null
-    
-    - name: zendesk_ticket_events_flattened
-      description: >
-        This model takes all of the ticket event history and summarizes it one 
-        row per ticket_id for useful fields like when it was first assigned, 
-        finally closed, etc.
+        to the ticket from within a report. This also adds a summary of metric 
+        values from the ticket metrics table. 
       columns:
       - name: ticket_id
         tests:

@@ -10,9 +10,9 @@ url as (
 
 ),
 
-events as (
+metrics as (
 
-    select * from {{ref('zendesk_ticket_events_flattened')}}
+    select * from {{ref('zendesk_ticket_metrics')}}
 
 ),
 
@@ -32,19 +32,30 @@ final as (
 
     select
         tickets.*,
-        events.ticket_created,
-        events.ticket_first_assigned,
-        events.ticket_first_solved,
-        events.ticket_last_solved,
-        events.ticket_closed,
+        metrics.created_at as ticket_created,
+        metrics.initially_assigned_at,
+        metrics.solved_at,
+        metrics.reopens,
+        metrics.replies,
+        metrics.first_resolution_time_in_minutes_business,
+        metrics.first_resolution_time_in_minutes_calendar,
+        metrics.full_resolution_time_in_minutes_business,
+        metrics.full_resolution_time_in_minutes_calendar,
+        metrics.on_hold_time_in_minutes_business,
+        metrics.on_hold_time_in_minutes_calendar,
+        metrics.reply_time_in_minutes_business,
+        metrics.reply_time_in_minutes__calendar,
+        metrics.requester_wait_time_in_minutes_business,
+        metrics.requester_wait_time_in_minutes_calendar,
+        
         organizations.name as organization_name,
         requesters.email as requester_email,
         assignees.email as assignee_email,
         'https://' || url.org_url_identifier || '.zendesk.com/agent/tickets/' 
             || tickets.ticket_id::varchar as web_url
     from tickets
-    left join events 
-        on events.ticket_id = tickets.ticket_id
+    left join metrics 
+        on metrics.ticket_id = tickets.ticket_id
     left join organizations 
         on organizations.organization_id = tickets.organization_id
     left join users as requesters
