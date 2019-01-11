@@ -14,6 +14,8 @@ models:
     stitch:
       enabled: true
       vars:
-        organizations_table: # schema.table
-        tickets_table:       # schema.table
-        users_table:         # schema.table
+        organizations_table:   # schema.table
+        tickets_table:         # schema.table
+        ticket_metrics_table:  # schema.table
+        users_table:           # schema.table
+        ticket_tags_table:     # schema.table

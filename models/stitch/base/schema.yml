@@ -1,0 +1,41 @@
+version: 2
+
+models:
+    - name: zendesk_organizations
+      columns:
+      - name: organization_id
+        tests:
+            - unique
+            - not_null
+    
+    - name: zendesk_tickets
+      columns:
+      - name: ticket_id
+        tests:
+            - unique
+            - not_null
+            
+    - name: zendesk_users
+      columns:
+      - name: user_id
+        tests:
+            - unique
+            - not_null
+            
+    - name: zendesk_ticket_metrics
+      columns:
+      - name: ticket_id
+        tests:
+            - unique
+            - not_null
+      - name: id
+        tests:
+            - unique
+            - not_null
+            
+    - name: zendesk_ticket_tags
+      columns:
+      - name: tag_id
+        tests:
+            - unique
+            - not_null

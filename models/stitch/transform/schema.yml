@@ -1,0 +1,23 @@
+version: 2
+
+models:
+    - name: zendesk_org_url
+      description: >
+        This is a useful utility model that should return a single value - the 
+        url identifier of the customer's zendesk account.
+      columns:
+      - name: org_url_identifier
+        tests:
+            - unique
+            - not_null
+    
+    - name: zendesk_tickets_xf
+      description: >
+        Adds a useful utility field, web_url. This is useful to provide a link 
+        to the ticket from within a report. This also adds a summary of metric 
+        values from the ticket metrics table. 
+      columns:
+      - name: ticket_id
+        tests:
+            - unique
+            - not_null
